@@ -1,0 +1,22 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MTTLoan/Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MTTLoan/Playwright/issues"
+  },
+  "homepage": "https://github.com/MTTLoan/Playwright#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.2.0"
+  }
+}
