@@ -1,12 +1,14 @@
 class LoginPage {
   constructor(page) {
     this.page = page;
-    this.signInButton = page.locator("#login");
-    this.username = page.locator("#userEmail");
-    this.password = page.locator("#userPassword");
+    this.signInButton = page.locator("#btnLogin");
+    this.username = page.locator("#name");
+    this.password = page.locator("#password");
   }
   async goto() {
-    await this.page.goto("https://rahulshettyacademy.com/client");
+    await this.page.goto(
+      "https://cosmeticsellingweb.onrender.com/account/login",
+    );
   }
   async validLogin(username, password) {
     await this.username.fill(username);

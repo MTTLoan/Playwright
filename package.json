@@ -2,7 +2,9 @@
   "name": "playwright",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MTTLoan/Playwright.git"
