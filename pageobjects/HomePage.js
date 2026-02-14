@@ -1,10 +1,12 @@
 class HomePage {
   constructor(page) {
     this.page = page;
-    this.products = page.locator(".card-body");
-    this.productText = page.locator(".card-body b");
-    this.cartButton = page.locator("button[routerlink*='cart']");
-    this.ordersButton = page.locator("button[routerlink*='myorders']");
+    this.products = page.locator(".product");
+    this.productText = page.locator(".product p");
+    this.productImage = page.locator(".product img");
+    this.cartButton = page.locator(".cart-icon");
+    this.ordersButton = page.getByText("ĐƠN HÀNG");
+    this.voucherButton = page.getByText("VOUCHER");
   }
 
   async searchProduct(productName) {
@@ -15,7 +17,7 @@ class HomePage {
       if (
         (await this.products.nth(i).locator("b").textContent()) === productName
       ) {
-        await this.products.nth(i).locator("text= Add To Cart").click();
+        await this.products.nth(i).locator("img").click();
         break;
       }
     }
@@ -27,6 +29,10 @@ class HomePage {
 
   async navigateToOrders() {
     await this.ordersButton.click();
+  }
+
+  async navigateToVoucher() {
+    await this.voucherButton.click();
   }
 }
 module.exports = { HomePage };
