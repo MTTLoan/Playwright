@@ -4,6 +4,7 @@ const { DetailProductPage } = require("./DetailProductPage");
 const { CartPage } = require("./CartPage");
 const { CheckoutPage } = require("./CheckoutPage");
 const { OrdersHistoryPage } = require("./OrdersHistoryPage");
+const { SearchPage } = require("./SearchPage");
 
 class POManager {
   constructor(page) {
@@ -14,10 +15,7 @@ class POManager {
     this.cartPage = new CartPage(page);
     this.checkoutPage = new CheckoutPage(page);
     this.ordersHistoryPage = new OrdersHistoryPage(page);
-    // this.dashboardPage = new DashboardPage(page);
-    // this.cartPage = new CartPage(page);
-    // this.ordersReviewPage = new OrdersReviewPage(page);
-    // this.ordersHistoryPage = new OrdersHistoryPage(page);
+    this.searchPage = new SearchPage(page);
   }
   getLoginPage() {
     return this.loginPage;
@@ -37,14 +35,8 @@ class POManager {
   getOrdersHistoryPage() {
     return this.ordersHistoryPage;
   }
-  // getCartPage() {
-  //   return this.cartPage;
-  // }
-  // getOrdersReviewPage() {
-  //   return this.ordersReviewPage;
-  // }
-  // getOrdersHistoryPage() {
-  //   return this.ordersHistoryPage;
-  // }
+  getSearchPage() {
+    return this.searchPage;
+  }
 }
 module.exports = { POManager };

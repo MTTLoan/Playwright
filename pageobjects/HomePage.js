@@ -10,6 +10,10 @@ class HomePage {
     this.homeButton = page.locator(".navbar-brand");
   }
 
+  async goto() {
+    await this.page.goto("https://cosmeticsellingweb.onrender.com/");
+  }
+
   async searchProduct(productName) {
     await this.products.first().waitFor();
     const titles = await this.productText.allTextContents();
