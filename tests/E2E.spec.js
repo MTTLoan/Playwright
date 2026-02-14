@@ -14,7 +14,8 @@ test("E2E test", async ({ page }) => {
   const poManager = new POManager(page);
   const loginPage = poManager.getLoginPage();
   await loginPage.goto();
-  await loginPage.validLogin("khachhang", "123456");
+  await loginPage.login("khachhang", "123456");
+  await loginPage.acceptAlert();
 
   const homePage = poManager.getHomePage();
   await homePage.searchProduct(productName);
@@ -26,8 +27,8 @@ test("E2E test", async ({ page }) => {
   await homePage.navigateToCart();
 
   const cartPage = poManager.getCartPage();
-  await cartPage.VerifyProductIsDisplayed(productName);
-  await cartPage.Checkout();
+  await cartPage.verifyProductIsDisplayed(productName);
+  await cartPage.checkout();
 
   const checkoutPage = poManager.getCheckoutPage();
   await checkoutPage.fillShippingInfo(province, district, ward, address);
@@ -53,7 +54,8 @@ test("Buy Now test", async ({ page }) => {
   const poManager = new POManager(page);
   const loginPage = poManager.getLoginPage();
   await loginPage.goto();
-  await loginPage.validLogin("khachhang", "123456");
+  await loginPage.login("khachhang", "123456");
+  await loginPage.acceptAlert();
 
   const homePage = poManager.getHomePage();
   await homePage.searchProduct(productName);

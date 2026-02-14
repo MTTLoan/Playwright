@@ -11,10 +11,12 @@ class LoginPage {
       "https://cosmeticsellingweb.onrender.com/account/login",
     );
   }
-  async validLogin(username, password) {
+  async login(username, password) {
     await this.username.fill(username);
     await this.password.fill(password);
     await this.signInButton.click();
+  }
+  async acceptAlert() {
     await this.okButton.click();
   }
 }
