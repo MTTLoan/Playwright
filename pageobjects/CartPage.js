@@ -57,11 +57,39 @@ class CartPage {
     await expect(item).toHaveCount(0);
   }
 
-  async getProductCount() {
-    return await this.cartItems.count();
+  async verifyTotalPriceCalculation() {
+    await this.waitForCartPage();
+
+    const itemCount = await this.cartItems.count();
+    let total = 0;
+
+    for (let i = 0; i < itemCount; i++) {
+      const item = this.cartItems.nth(i);
+
+      const unitPriceText = await item
+        .locator(".cart-item-price span")
+        .first()
+        .textContent();
+      const unitPrice = Number(unitPriceText.replace(/[^\d]/g, ""));
+      // console.log("Unit price:", unitPriceText, "->", unitPrice);
+
+      const quantityText = await item
+        .locator(".cart-item-quantity input")
+        .inputValue();
+      const quantity = Number(quantityText.trim());
+      // console.log("Quantity:", quantityText, "->", quantity);
+
+      total += unitPrice * quantity;
+    }
+
+    // Lấy tổng tiền hiển thị
+    const displayedTotalText = await this.getTotalPrice();
+
+    // Loại bỏ dấu chấm và ký tự " đ"
+    const normalizedTotal = Number(displayedTotalText.replace(/[^\d]/g, ""));
+    // console.log("Displayed total:", displayedTotalText, "->", normalizedTotal);
+    // console.log("Calculated total:", total);
+    expect(normalizedTotal).toBe(total);
   }
-  // getProductLocator(productName) {
-  //   return this.cartItems.filter({ hasText: productName });
-  // }
 }
 module.exports = { CartPage };

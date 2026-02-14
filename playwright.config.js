@@ -18,7 +18,7 @@ export default defineConfig({
   expect: {
     timeout: 10000,
   },
-  retries: 1,
+  // retries: 1,
   workers: 5,
   reporter: "html",
   use: {

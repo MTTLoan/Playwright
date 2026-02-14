@@ -10,7 +10,8 @@ class DetailProductPage {
     this.okButton = page.locator(".swal2-confirm");
   }
   async selectVersion(version) {
-    await this.versionButtons.first().waitFor();
+    // await this.versionButtons.first().waitFor();
+    await this.page.waitForLoadState("networkidle");
     await this.versionButtons.nth(version - 1).click();
   }
   async increaseQuantity(quantity) {

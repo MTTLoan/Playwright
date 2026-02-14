@@ -20,8 +20,8 @@ test.beforeAll(async ({ browser }) => {
   await context.storageState({ path: "state.json" });
 
   // Add to cart
-  const version = 1;
-  const quantity = 1;
+  const version = "1";
+  const quantity = "1";
   const homePage = poManager.getHomePage();
   await homePage.searchProduct(productName);
   const detailProductPage = poManager.getDetailProductPage();
@@ -38,6 +38,15 @@ test("Product is displayed in cart", async ({ browser }) => {
   await page.goto(cartUrl);
   await cartPage.waitForCartPage();
   await cartPage.verifyProductIsDisplayed(productName);
+});
+
+test("Verify total price calculation", async ({ browser }) => {
+  const context = await browser.newContext({ storageState: "state.json" });
+  const page = await context.newPage();
+  const poManager = new POManager(page);
+  const cartPage = poManager.getCartPage();
+  await page.goto(cartUrl);
+  await cartPage.verifyTotalPriceCalculation();
 });
 
 test("Increase product quantity", async ({ browser }) => {
