@@ -29,4 +29,4 @@ class CheckoutPage {
     await this.okButton.click();
   }
 }
-module.exports = { CheckoutPage };
+export default { CheckoutPage };

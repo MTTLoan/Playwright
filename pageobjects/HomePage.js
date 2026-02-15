@@ -44,4 +44,4 @@ class HomePage {
     await this.voucherButton.click();
   }
 }
-module.exports = { HomePage };
+export default { HomePage };

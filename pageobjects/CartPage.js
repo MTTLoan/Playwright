@@ -1,4 +1,4 @@
-const { test, expect } = require("@playwright/test");
+import { expect } from "@playwright/test";
 class CartPage {
   constructor(page) {
     this.page = page;
@@ -92,4 +92,4 @@ class CartPage {
     expect(normalizedTotal).toBe(total);
   }
 }
-module.exports = { CartPage };
+export default { CartPage };

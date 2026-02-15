@@ -20,4 +20,4 @@ class LoginPage {
     await this.okButton.click();
   }
 }
-module.exports = { LoginPage };
+export default { LoginPage };

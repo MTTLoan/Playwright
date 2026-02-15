@@ -1,12 +1,13 @@
-const { LoginPage } = require("./LoginPage");
-const { HomePage } = require("./HomePage");
-const { DetailProductPage } = require("./DetailProductPage");
-const { CartPage } = require("./CartPage");
-const { CheckoutPage } = require("./CheckoutPage");
-const { OrdersHistoryPage } = require("./OrdersHistoryPage");
-const { SearchPage } = require("./SearchPage");
-const { ProfilePage } = require("./ProfilePage");
-const { ChangePasswordPage } = require("./ChangePasswordPage").default;
+import { LoginPage } from "./LoginPage";
+import { HomePage } from "./HomePage";
+import { DetailProductPage } from "./DetailProductPage";
+import { CartPage } from "./CartPage";
+import { CheckoutPage } from "./CheckoutPage";
+import { OrdersHistoryPage } from "./OrdersHistoryPage";
+import { SearchPage } from "./SearchPage";
+import { ProfilePage } from "./ProfilePage";
+import { ChangePasswordPage } from "./ChangePasswordPage";
+import { VoucherPage } from "./VoucherPage";
 
 class POManager {
   constructor(page) {
@@ -20,6 +21,7 @@ class POManager {
     this.searchPage = new SearchPage(page);
     this.profilePage = new ProfilePage(page);
     this.changePasswordPage = new ChangePasswordPage(page);
+    this.voucherPage = new VoucherPage(page);
   }
   getLoginPage() {
     return this.loginPage;
@@ -48,5 +50,8 @@ class POManager {
   getChangePasswordPage() {
     return this.changePasswordPage;
   }
+  getVoucherPage() {
+    return new VoucherPage(this.page);
+  }
 }
-module.exports = { POManager };
+export default { POManager };

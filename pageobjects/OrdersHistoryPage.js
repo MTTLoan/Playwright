@@ -1,4 +1,4 @@
-const { expect } = require("@playwright/test");
+import { expect } from "@playwright/test";
 class OrdersHistoryPage {
   constructor(page) {
     this.page = page;
@@ -73,4 +73,4 @@ class OrdersHistoryPage {
   }
 }
 
-module.exports = { OrdersHistoryPage };
+export default { OrdersHistoryPage };

@@ -27,4 +27,4 @@ class DetailProductPage {
     await this.buyNowButton.click();
   }
 }
-module.exports = { DetailProductPage };
+export default { DetailProductPage };
