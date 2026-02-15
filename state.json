@@ -2,20 +2,20 @@
   "cookies": [
     {
       "name": "XSRF-TOKEN",
-      "value": "eyJpdiI6IjVlMm1lNTFaZDVyVGpsQjF3Zkw0Wnc9PSIsInZhbHVlIjoiMWtEZHFhVERabXNrb2ZaNkE5WGljRHova3N4eFE1clRGYVpuUFBWbDJIM1l5K3puZlB5ZTdJQUtaalRBeXh5RDhjMXN6TktLbkF6YUgrNTFRK0grbmQyL2czQnorSmtpN1pJblE0K2gwMG55amtFYWsvVzFTbFdJdm4vWitrQTgiLCJtYWMiOiIzNTcxODQwYjgyZGM5ZWNjYjU1ZjJjMjQ3OTBjZTU2OGRmYzQ4MTQwYmQzMjg2YzI2MjMzMmU3YWRkNDRmY2Q0IiwidGFnIjoiIn0%3D",
+      "value": "eyJpdiI6Ino2WUxreWZjb04wRG90bUxHS0pSZ2c9PSIsInZhbHVlIjoiMFZ4L1RLdm01WkljcUtJS2lXZ3lmYnBRdHUrWHRDWFhreTVuSTR5V0pIZiszTHdhaXkzZzF0d3BYaHJEbkFYRmkyRkpCazcvQlBFd3dXM2RqSmpKYTRhVWx5dHN1YlprRzFxaTBNKzFmRUVodXdQcGdhQzBRbEJmZ2QxUU5VRHYiLCJtYWMiOiJhMDhmZTU2MmM2YTZjYTU0Y2RhNDkzNTlhMGE3ODg5ZjMzYjhkYzA4NDhiNWE5MTYyODhiYTRhODY3YzAwYjM0IiwidGFnIjoiIn0%3D",
       "domain": "cosmeticsellingweb.onrender.com",
       "path": "/",
-      "expires": 1771131151.757887,
+      "expires": 1771147155.643568,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "laravel_session",
-      "value": "eyJpdiI6IjR2dDBlU3pTYTl6eVZmamlNZDUrMEE9PSIsInZhbHVlIjoiQUQzc3VLaXhabzlncjd0NXVRdHVMOXZFRytEb290eTQvaENxMnRKRUI3SVJnSTJ2WGlPVTJoYmcvYjhtcGFtdVpyQysxVStOd3g0dE5VdGYxUlRMcVhQeFFyTkxMQkJIa0IxRkxYTC9tSzZmMEdqSlB4bjAxakRINFJReDdZejIiLCJtYWMiOiJlMjBiMTM0Y2Q1ZmE4NmUxNzBmNjVkZTkwZTdjNjFmY2FhNjg1OGVmNjA0M2M4YWQ5YjgwYmVhMGFiNzM0YWRhIiwidGFnIjoiIn0%3D",
+      "value": "eyJpdiI6IitBcU5tUXdzNkpIQVdFVG9GaDlDdkE9PSIsInZhbHVlIjoiTjhLdHRsNjFsbWJRSm9YTkpqU1dndklTQ20rajk2UlVEdUxidU95bFZLQTdvRG12UzNOdmMvemNKd2NBMnBmaWNneEk5di9ZWUZIMWhPeis1cEZ0T2xQbno4TmVFdkhqeFd6TUM0NExGVUVzTFVMeG0wVk0rdGNPQjR3UW80Z2wiLCJtYWMiOiJmNTZlZDZiNmMxZTliOTE0OGY3Yjc3NTU1MTg0YmVkZGViNWM5OTcyY2I5NGUxNDcwMjY0ZmJhOTk4ZmQwOGIzIiwidGFnIjoiIn0%3D",
       "domain": "cosmeticsellingweb.onrender.com",
       "path": "/",
-      "expires": 1771131151.758152,
+      "expires": 1771147155.643782,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"

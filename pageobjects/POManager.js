@@ -5,6 +5,7 @@ const { CartPage } = require("./CartPage");
 const { CheckoutPage } = require("./CheckoutPage");
 const { OrdersHistoryPage } = require("./OrdersHistoryPage");
 const { SearchPage } = require("./SearchPage");
+const { ProfilePage } = require("./ProfilePage");
 
 class POManager {
   constructor(page) {
@@ -16,6 +17,7 @@ class POManager {
     this.checkoutPage = new CheckoutPage(page);
     this.ordersHistoryPage = new OrdersHistoryPage(page);
     this.searchPage = new SearchPage(page);
+    this.profilePage = new ProfilePage(page);
   }
   getLoginPage() {
     return this.loginPage;
@@ -37,6 +39,9 @@ class POManager {
   }
   getSearchPage() {
     return this.searchPage;
+  }
+  getProfilePage() {
+    return this.profilePage;
   }
 }
 module.exports = { POManager };
