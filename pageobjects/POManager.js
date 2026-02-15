@@ -6,6 +6,7 @@ const { CheckoutPage } = require("./CheckoutPage");
 const { OrdersHistoryPage } = require("./OrdersHistoryPage");
 const { SearchPage } = require("./SearchPage");
 const { ProfilePage } = require("./ProfilePage");
+const { ChangePasswordPage } = require("./ChangePasswordPage").default;
 
 class POManager {
   constructor(page) {
@@ -18,6 +19,7 @@ class POManager {
     this.ordersHistoryPage = new OrdersHistoryPage(page);
     this.searchPage = new SearchPage(page);
     this.profilePage = new ProfilePage(page);
+    this.changePasswordPage = new ChangePasswordPage(page);
   }
   getLoginPage() {
     return this.loginPage;
@@ -42,6 +44,9 @@ class POManager {
   }
   getProfilePage() {
     return this.profilePage;
+  }
+  getChangePasswordPage() {
+    return this.changePasswordPage;
   }
 }
 module.exports = { POManager };
