@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { POManager } from "../pageobjects/POManager";
+import POManager from "../pageobjects/POManager";
 const searchText = "chống nắng";
 
 test("Search returns products containing keyword", async ({ page }) => {

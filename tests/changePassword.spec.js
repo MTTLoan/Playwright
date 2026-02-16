@@ -1,5 +1,5 @@
-const { test, expect } = require("@playwright/test");
-const { POManager } = require("../pageobjects/POManager");
+import { test, expect } from "@playwright/test";
+import POManager from "../pageobjects/POManager";
 
 const username = "khachhang3";
 const password = "123456";

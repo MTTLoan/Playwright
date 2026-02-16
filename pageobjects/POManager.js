@@ -1,15 +1,16 @@
-import { LoginPage } from "./LoginPage";
-import { HomePage } from "./HomePage";
-import { DetailProductPage } from "./DetailProductPage";
-import { CartPage } from "./CartPage";
-import { CheckoutPage } from "./CheckoutPage";
-import { OrdersHistoryPage } from "./OrdersHistoryPage";
-import { SearchPage } from "./SearchPage";
-import { ProfilePage } from "./ProfilePage";
-import { ChangePasswordPage } from "./ChangePasswordPage";
-import { VoucherPage } from "./VoucherPage";
+import LoginPage from "./LoginPage";
+import HomePage from "./HomePage";
+import DetailProductPage from "./DetailProductPage";
+import CartPage from "./CartPage";
+import CheckoutPage from "./CheckoutPage";
+import OrdersHistoryPage from "./OrdersHistoryPage";
+import SearchPage from "./SearchPage";
+import ProfilePage from "./ProfilePage";
+import ChangePasswordPage from "./ChangePasswordPage";
+import VoucherPage from "./VoucherPage";
+import CategoryPage from "./CategoryPage";
 
-class POManager {
+export default class POManager {
   constructor(page) {
     this.page = page;
     this.loginPage = new LoginPage(page);
@@ -22,6 +23,7 @@ class POManager {
     this.profilePage = new ProfilePage(page);
     this.changePasswordPage = new ChangePasswordPage(page);
     this.voucherPage = new VoucherPage(page);
+    this.categoryPage = new CategoryPage(page);
   }
   getLoginPage() {
     return this.loginPage;
@@ -53,5 +55,7 @@ class POManager {
   getVoucherPage() {
     return new VoucherPage(this.page);
   }
+  getCategoryPage() {
+    return new CategoryPage(this.page);
+  }
 }
-export default { POManager };

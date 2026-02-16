@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { POManager } from "../pageobjects/POManager";
+import POManager from "../pageobjects/POManager";
 
 const cartUrl = "https://cosmeticsellingweb.onrender.com/cart";
 const productName = "Dầu tẩy trang hoa hồng Cocoon 140ml";

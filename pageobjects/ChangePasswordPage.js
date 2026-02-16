@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-class ChangePasswordPage {
+export default class ChangePasswordPage {
   constructor(page) {
     this.page = page;
 
@@ -48,5 +48,3 @@ class ChangePasswordPage {
     await this.logoutBtn.click();
   }
 }
-
-export default { ChangePasswordPage };

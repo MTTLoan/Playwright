@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { POManager } from "../pageobjects/POManager";
+import POManager from "../pageobjects/POManager";
 
 test("Valid login test", async ({ page }) => {
   const poManager = new POManager(page);

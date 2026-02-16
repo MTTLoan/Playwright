@@ -1,5 +1,5 @@
 import { expect } from "@playwright/test";
-class CartPage {
+export default class CartPage {
   constructor(page) {
     this.page = page;
     this.cartItems = page.locator(".cart-item");
@@ -92,4 +92,3 @@ class CartPage {
     expect(normalizedTotal).toBe(total);
   }
 }
-export default { CartPage };

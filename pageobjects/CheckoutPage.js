@@ -1,4 +1,4 @@
-class CheckoutPage {
+export default class CheckoutPage {
   constructor(page) {
     this.page = page;
     this.province = page.locator("#province");
@@ -29,4 +29,3 @@ class CheckoutPage {
     await this.okButton.click();
   }
 }
-export default { CheckoutPage };

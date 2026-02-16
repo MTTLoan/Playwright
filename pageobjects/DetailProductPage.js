@@ -1,4 +1,4 @@
-class DetailProductPage {
+export default class DetailProductPage {
   constructor(page) {
     this.page = page;
     this.quantityInput = "#quantity";
@@ -27,4 +27,3 @@ class DetailProductPage {
     await this.buyNowButton.click();
   }
 }
-export default { DetailProductPage };

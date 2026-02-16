@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-class ProfilePage {
+export default class ProfilePage {
   constructor(page) {
     this.page = page;
 
@@ -71,5 +71,3 @@ class ProfilePage {
     return await this.phoneInput.inputValue();
   }
 }
-
-export default { ProfilePage };

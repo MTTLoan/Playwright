@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { POManager } from "../pageobjects/POManager";
+import POManager from "../pageobjects/POManager";
 
 const ordersHistoryUrl = "https://cosmeticsellingweb.onrender.com/orderinfor";
 

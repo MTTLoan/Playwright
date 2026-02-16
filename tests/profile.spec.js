@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { POManager } from "../pageobjects/POManager";
+import POManager from "../pageobjects/POManager";
 
 test.beforeAll(async ({ browser }) => {
   // Login and save storage state to reuse in other tests

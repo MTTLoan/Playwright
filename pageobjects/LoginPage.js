@@ -1,4 +1,4 @@
-class LoginPage {
+export default class LoginPage {
   constructor(page) {
     this.page = page;
     this.signInButton = page.locator("#btnLogin");
@@ -20,4 +20,3 @@ class LoginPage {
     await this.okButton.click();
   }
 }
-export default { LoginPage };

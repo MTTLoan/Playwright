@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-class SearchPage {
+export default class SearchPage {
   constructor(page) {
     this.page = page;
     this.searchInput = page.locator(".search-input");
@@ -71,5 +71,3 @@ class SearchPage {
     return sales;
   }
 }
-
-export default { SearchPage };

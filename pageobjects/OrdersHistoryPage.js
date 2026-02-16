@@ -1,5 +1,5 @@
 import { expect } from "@playwright/test";
-class OrdersHistoryPage {
+export default class OrdersHistoryPage {
   constructor(page) {
     this.page = page;
     this.orderItems = page.locator(".order-item");
@@ -72,5 +72,3 @@ class OrdersHistoryPage {
     await this.page.reload();
   }
 }
-
-export default { OrdersHistoryPage };
