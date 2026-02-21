@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-class VoucherPage {
+export default class VoucherPage {
   constructor(page) {
     this.page = page;
     this.voucherItems = page.locator(".coupon_code");
@@ -55,4 +55,3 @@ class VoucherPage {
     return codes;
   }
 }
-export default { VoucherPage };
