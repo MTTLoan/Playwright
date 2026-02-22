@@ -6,7 +6,7 @@ const productName = "Dầu tẩy trang hoa hồng Cocoon 140ml";
 
 test.beforeAll(async ({ browser }) => {
   // Login and save storage state to reuse in other tests
-  const username = "khachhang";
+  const username = "khachhang2";
   const password = "123456";
 
   const context = await browser.newContext();
@@ -17,7 +17,7 @@ test.beforeAll(async ({ browser }) => {
   await loginPage.login(username, password);
   await loginPage.acceptAlert();
 
-  await context.storageState({ path: "state.json" });
+  await context.storageState({ path: "state2.json" });
 
   // Add to cart
   const version = "1";
@@ -31,7 +31,7 @@ test.beforeAll(async ({ browser }) => {
 });
 
 test("Product is displayed in cart", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state2.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const cartPage = poManager.getCartPage();
@@ -41,7 +41,7 @@ test("Product is displayed in cart", async ({ browser }) => {
 });
 
 test("Verify total price calculation", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state2.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const cartPage = poManager.getCartPage();
@@ -50,7 +50,7 @@ test("Verify total price calculation", async ({ browser }) => {
 });
 
 test("Increase product quantity", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state2.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const cartPage = poManager.getCartPage();
@@ -59,7 +59,7 @@ test("Increase product quantity", async ({ browser }) => {
 });
 
 test("Decrease product quantity", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state2.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const cartPage = poManager.getCartPage();
@@ -68,7 +68,7 @@ test("Decrease product quantity", async ({ browser }) => {
 });
 
 test("Remove product from cart", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state2.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const cartPage = poManager.getCartPage();

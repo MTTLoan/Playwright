@@ -1,0 +1,24 @@
+[
+  {
+    "username": "khachhang3",
+    "password": "123456",
+    "productName": "Phấn nước che phủ cao mỏng nhẹ OHUI Ultimate Cover Denier Cushion 13G x 2",
+    "version": 2,
+    "quantity": 2,
+    "province": "Thành phố Hồ Chí Minh",
+    "district": "Quận 1",
+    "ward": "Phường Bến Nghé",
+    "address": "123 Đường ABC"
+  },
+  {
+    "username": "khachhang4",
+    "password": "123456",
+    "productName": "Nước tẩy trang hoa hồng Cocoon 310ml",
+    "version": 1,
+    "quantity": 1,
+    "province": "Thành phố Hồ Chí Minh",
+    "district": "Quận 3",
+    "ward": "Phường Võ Thị Sáu",
+    "address": "456 Đường XYZ"
+  }
+]

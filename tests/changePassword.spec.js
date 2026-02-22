@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 import POManager from "../pageobjects/POManager";
 
-const username = "khachhang3";
-const password = "123456";
-const newPassword = "12345678";
+const username = "khachhang6";
+const password = "12345678";
+const newPassword = "123456";
 
 test.beforeAll(async ({ browser }) => {
   // Login and save storage state to reuse in other tests
@@ -15,12 +15,12 @@ test.beforeAll(async ({ browser }) => {
   await loginPage.login(username, password);
   await loginPage.acceptAlert();
 
-  await context.storageState({ path: "state.json" });
+  await context.storageState({ path: "state1.json" });
   await context.close();
 });
 
 test("Submit with empty fields", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state1.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const changePasswordPage = poManager.getChangePasswordPage();
@@ -35,7 +35,7 @@ test("Submit with empty fields", async ({ browser }) => {
 });
 
 test("Empty current password field", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state1.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const changePasswordPage = poManager.getChangePasswordPage();
@@ -50,7 +50,7 @@ test("Empty current password field", async ({ browser }) => {
 });
 
 test("Empty new password field", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state1.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const changePasswordPage = poManager.getChangePasswordPage();
@@ -64,7 +64,7 @@ test("Empty new password field", async ({ browser }) => {
 });
 
 test("Wrong current password", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state1.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const changePasswordPage = poManager.getChangePasswordPage();
@@ -74,7 +74,7 @@ test("Wrong current password", async ({ browser }) => {
 });
 
 test("New password too short", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state1.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const changePasswordPage = poManager.getChangePasswordPage();
@@ -86,7 +86,7 @@ test("New password too short", async ({ browser }) => {
 });
 
 test("Password confirmation mismatch", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state1.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const changePasswordPage = poManager.getChangePasswordPage();
@@ -98,7 +98,7 @@ test("Password confirmation mismatch", async ({ browser }) => {
 });
 
 test("Change password successfully", async ({ browser }) => {
-  const context = await browser.newContext({ storageState: "state.json" });
+  const context = await browser.newContext({ storageState: "state1.json" });
   const page = await context.newPage();
   const poManager = new POManager(page);
   const changePasswordPage = poManager.getChangePasswordPage();
