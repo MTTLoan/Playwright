@@ -22,9 +22,25 @@ export default defineConfig({
   workers: 4,
   reporter: "html",
   use: {
-    browserName: "chromium",
     headless: false,
     screenshot: "only-on-failure",
     trace: "retain-on-failure",
   },
+
+  projects: [
+    {
+      name: "chrome",
+      use: { ...devices["Desktop Chrome"] },
+    },
+
+    {
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
+    },
+
+    {
+      name: "safari",
+      use: { ...devices["Desktop Safari"] },
+    },
+  ],
 });

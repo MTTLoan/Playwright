@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "XSRF-TOKEN",
+      "value": "eyJpdiI6Img1TXVBL2pESWpFeCswWHlaVFJXemc9PSIsInZhbHVlIjoiYTJ5a0k1a1dFeXFKUVQ2dVpNMlpMZmhxdS81TFhTTkV0ZENwMHE2Z09ZemtBTkdPTWs0bUZrcDdwM3phOWQrSHFpaVlOS2lzV1hwMzkwcTdsakx5ZHFHN3d4aFN4OVA3YUYxNEZxQTNZRDhvWDUzTzRoT1BHcEVYMEFTanU0OFYiLCJtYWMiOiJiZjBiMDNiYWNmYzgzYmNhNmJiNGUzMzkwZGIwNWIxNWY3MGQ3MzkyZTY3YjQxZjY1ZTgzMWNiNWZkMzM2YTZhIiwidGFnIjoiIn0%3D",
+      "domain": "cosmeticsellingweb.onrender.com",
+      "path": "/",
+      "expires": 1772642021.834447,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "laravel_session",
+      "value": "eyJpdiI6IkVlMVU2aDN3ZWJGRFFObXdWeFRMb2c9PSIsInZhbHVlIjoiZG8yUFBSaHk2dWJocXBBRzZJRmxsMG1kRnFOUGoyZndvTHZIbXlodkhmVXIzNlgxeHZvK3hULytxK0hQdzhmMEo0RUFQQVh2Qm1ERE9ITXdWK3B1dUYwbE1tR1hXU01xQk04WnNLbUMwQloxd0xFYXpNUE41UkhNTjArK29uYysiLCJtYWMiOiJjNTBlZjMwMjFiMTE5ZjBlNzgxZWI3YTVjNmIyY2E3OGU2YmE4ZmQ4MGU3MGY1OGVmMzMzNDExNzI2MzhjMzliIiwidGFnIjoiIn0%3D",
+      "domain": "cosmeticsellingweb.onrender.com",
+      "path": "/",
+      "expires": 1772642021.835033,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

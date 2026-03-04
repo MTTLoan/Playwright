@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "regression": "npx playwright test"
+    "regression": "npx playwright test",
+    "chrome": "npx playwright test --config playwright1.config.js --project=chrome",
+    "firefox": "npx playwright test --config playwright1.config.js --project=firefox",
+    "safari": "npx playwright test --config playwright1.config.js --project=safari"
   },
   "repository": {
     "type": "git",

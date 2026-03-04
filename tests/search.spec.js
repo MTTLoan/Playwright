@@ -52,7 +52,7 @@ test("Sort by price descending", async ({ page }) => {
   expect(prices).toEqual(sorted);
 });
 
-test.only("Sort by best selling", async ({ page }) => {
+test("Sort by best selling", async ({ page }) => {
   const poManager = new POManager(page);
   const homePage = poManager.getHomePage();
   await homePage.goto();

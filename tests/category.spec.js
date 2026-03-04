@@ -11,7 +11,7 @@ test("User can navigate to category and see products", async ({ page }) => {
   expect(await categoryPage.getCategoryTitle()).toBe("Tẩy trang");
 });
 
-test.only("Open category using sidebar", async ({ page }) => {
+test("Open category using sidebar", async ({ page }) => {
   const poManager = new POManager(page);
   const homePage = poManager.getHomePage();
   await homePage.goto();

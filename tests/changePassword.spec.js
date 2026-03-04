@@ -2,8 +2,8 @@ import { test, expect } from "@playwright/test";
 import POManager from "../pageobjects/POManager";
 
 const username = "khachhang6";
-const password = "12345678";
-const newPassword = "123456";
+const password = "123456";
+const newPassword = "12345678";
 
 test.beforeAll(async ({ browser }) => {
   // Login and save storage state to reuse in other tests
